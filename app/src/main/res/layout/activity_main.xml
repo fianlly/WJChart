@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#EFF9EA"
+    tools:context=".activity.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dip"
+        android:gravity="center_vertical"
+        android:background="#407B95">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="系统欢迎您！"
+            android:textSize="18sp"
+            android:textColor="#FFFFFF"
+            android:padding="5dip" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="登录时间：2015/05/26 10:23"
+            android:textSize="18sp"
+            android:textColor="#FFFFFF"
+            android:padding="5dip"
+            android:id="@+id/time"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dip">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginRight="10dip">
+
+            <RadioGroup
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="#85B6CC">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="未读消息"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    android:padding="15dip"
+                    android:id="@+id/btn_unread"
+                    android:checked="false" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="已读消息"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:padding="15dip"
+                    android:button="@null"
+                    android:id="@+id/btn_read"
+                    android:checked="false" />
+            </RadioGroup>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="1"
+                android:id="@+id/fragment"></FrameLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dip">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#85B6CC"
+                android:gravity="center"
+                android:padding="15dp"
+                android:text="李四客户最近5次交易"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:id="@+id/tv_title" />
+
+            <ListView
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="1"
+                android:id="@+id/main_list"
+                android:dividerHeight="0dp"
+                android:listSelector="#00000000"
+                android:divider="@null"
+                android:padding="10dip"
+                android:layout_gravity="center_horizontal" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:padding="10dip"
+                android:layout_marginBottom="20dip"
+                android:layout_gravity="center_horizontal">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#85B6CC"
+                    android:text="查看"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    android:id="@+id/btn_check" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>
